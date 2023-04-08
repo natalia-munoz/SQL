@@ -1,0 +1,26 @@
+
+
+// creation of store database
+
+CREATE TABLE store 
+(id INTEGER PRIMARY KEY, name TEXT, kind TEXT, price INTEGER, aisle INTEGER);
+INSERT INTO store VALUES 
+(1, "apples", "food", 0.50, 5),
+(2, "cereal", "food", 3.00, 2),
+(3, "towel", "home", 6.00, 4),
+(4, "camera", "electronics", 200.00, 1),
+(5, "deoderant", "hygine", 5.00, 10),
+(6, "bread","food", 4.00, 1),
+(7, "pillow", "home", 12.00, 4),
+(8, "mini piano", "toys", 24.00, 7),
+(9, "diapers", "baby", 15.00, 8),
+(10, "bike", "sports", 65.00, 15),
+(11, "cookies", "food", 5.00, 2),
+(12, "rice", "food", 2.00, 3),
+(13, "microwave", "home", 35.00, 8);
+
+// displayed database by only looking at the food and ordered it fromleast expensive to most expensive
+
+SELECT * FROM store 
+WHERE kind ="food"
+ORDER BY price ASC;
